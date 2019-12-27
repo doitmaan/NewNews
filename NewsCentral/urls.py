@@ -2,6 +2,8 @@
 from django.urls import path
 
 from . import views
+from .views import login
+
 
 urlpatterns = [
     path('ApiAdmin/ListAll/', views.ListStocks.as_view()),
@@ -12,5 +14,7 @@ urlpatterns = [
     path('PostValidatedStock', views.PostValidatedStock.PostStock),
     path('linkcreation', views.PostMethodLink.post_LINK),
     # path('query/<str:StockId>/', views.GETMethod.QueryStock),
+    path('login', login),
+
 
 ]
